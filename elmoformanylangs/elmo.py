@@ -93,7 +93,7 @@ def create_batches(x, batch_size, word2id, char2id, config, perm=None, shuffle=F
         if text is not None:
             batches_text = [batches_text[i] for i in perm]
 
-    logging.info("{} batches, avg len: {:.1f}".format(
+    logging.debug("{} batches, avg len: {:.1f}".format(
         nbatch, sum_len / len(x)))
     recover_ind = [item for sublist in batches_ind for item in sublist]
     if text is not None:
