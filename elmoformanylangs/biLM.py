@@ -197,7 +197,7 @@ def create_batches(x, batch_size, word2id, char2id, config, perm=None, shuffle=T
     batches_lens = [batches_lens[i] for i in perm]
     batches_masks = [batches_masks[i] for i in perm]
 
-  logging.info("{} batches, avg len: {:.1f}".format(nbatch, sum_len / len(x)))
+  logging.debug("{} batches, avg len: {:.1f}".format(nbatch, sum_len / len(x)))
   return batches_w, batches_c, batches_lens, batches_masks
 
 
