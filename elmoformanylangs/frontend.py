@@ -151,7 +151,7 @@ def create_batches(x, batch_size, word2id, char2id, config, perm=None, shuffle=T
     if text is not None:
       batches_text = [batches_text[i] for i in perm]
 
-  logging.info("{} batches, avg len: {:.1f}".format(nbatch, sum_len / len(x)))
+  logging.debug("{} batches, avg len: {:.1f}".format(nbatch, sum_len / len(x)))
   if text is not None:
     return batches_w, batches_c, batches_lens, batches_masks, batches_text
   return batches_w, batches_c, batches_lens, batches_masks
