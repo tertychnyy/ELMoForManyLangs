@@ -447,8 +447,8 @@ def train():
     config = json.load(fin)
 
   # Dump configurations
-  print(opt)
-  print(config)
+  #print(opt)
+  #print(config)
 
   # set seed.
   torch.manual_seed(opt.seed)
